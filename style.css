@@ -1,6 +1,6 @@
 /* #region RESET */
 :root {
-    --header-blue: #3161e0;
+    --header-blue: #265EE8;
     --black: #23272a;
     --bg-gray: #f6f6f6;
     --text-blue: #7289da;
@@ -15,9 +15,7 @@
 
 /* #endregion  */
 /* #region DEBUG */
-.debug .header-box>*,
-.hero-box,
-.cols,
+.debug .cols,
 .bottom-footer>* {
     border: 1px dashed;
 }
@@ -40,59 +38,101 @@ body {
     display: flex;
 }
 
+.btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.white-btn {
+    background-color: #fff;
+    color: var(--black);
+    padding: 8px 15px;
+    margin-right: 10px;
+}
+
+.black-btn {
+    background-color: var(--black);
+    color: #fff;
+    padding: 8px 15px;
+}
+
 /* #endregion  */
 /* #region HEADER */
 header {
     background-color: var(--header-blue);
+    color: #fff;
 }
 
 .header-box {
-    width: 70%;
     min-height: 40px;
-    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
 }
 
 /*-------------------
     header box
 -------------------*/
 .header-box * {
-    background-color: var(--nav-yellow);
-    padding: 2px 6px;
     font-size: 12px;
+    color: #fff;
 }
 
-.logo {
-    flex-grow: 1;
+header .logo {
+    width: 125px;
+    height: 35px;
 }
 
 .header-nav {
-    flex-grow: 2;
+    flex-grow: 1;
     text-align: center;
 }
 
-.header-nav a {
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.header-nav li a {
     text-decoration: none;
-    color: black;
+    padding: 2px 16px;
 }
 
 .login-sect {
-    flex-grow: 1;
     text-align: right;
+    background-color: #fff;
+    color: var(--black);
 }
 
 /* #endregion  */
 /* #region HERO */
 .hero {
-    background-color: var(--hero-blue);
-    min-height: 350px;
+    background-image: url(img/jumbo.png);
+    background-size: cover;
+    min-height: 550px;
 }
 
 .hero-box {
-    background-color: var(--hero-pink);
-    width: 60%;
-    min-height: 290px;
+    min-height: 300px;
+    max-width: 750px;
+    text-align: center;
     align-self: center;
+}
+
+.hero-box h1 {
+    margin-bottom: 20px;
+}
+
+.hero-box p {
+    line-height: 1.5;
+    padding: 15px;
+    margin-bottom: 15px;
 }
 
 /* #endregion  */
