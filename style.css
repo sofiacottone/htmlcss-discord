@@ -15,9 +15,6 @@
 
 /* #endregion  */
 /* #region DEBUG */
-.debug .bottom-footer>* {
-    border: 1px dashed;
-}
 
 /* #endregion  */
 /* #region GENERAL */
@@ -99,7 +96,7 @@ header {
     font-size: 12px;
 }
 
-header .logo {
+.logo {
     max-width: 124px;
     max-height: 34px;
 }
@@ -255,26 +252,23 @@ footer .section-box .col-60 .col-25 {
 footer h3,
 footer h4 {
     color: var(--text-blue);
-}
-
-.f-border {
-    border-top: 1px solid #CDCDCD;
-    padding: 19px 19px 0 19px;
+    margin-bottom: 10px;
 }
 
 .bottom-footer {
-    min-height: 30px;
-    width: 70%;
-    background-color: var(--footer-aqua);
+    min-width: 830px;
+    min-height: 50px;
     justify-content: space-between;
     align-items: center;
     align-self: center;
+    border-top: 1px solid var(--text-blue);
+    padding: 20px 0 30px 0;
 }
 
-.bottom-footer>* {
-    font-size: 10px;
-    padding: 2px 4px;
-    background-color: var(--footer-pink);
+
+.bottom-footer .logo {
+    max-width: 124px;
+    max-height: 30px;
 }
 
 /*----------------------
@@ -288,7 +282,6 @@ footer h4 {
     position: relative;
     display: inline-block;
     color: #fff;
-    margin-top: 10px;
 }
 
 .dropbtn,
