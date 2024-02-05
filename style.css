@@ -15,7 +15,7 @@
 
 /* #endregion  */
 /* #region DEBUG */
-.debug .cols,
+.debug [class^="col"],
 .bottom-footer>* {
     border: 1px dashed;
 }
@@ -38,23 +38,37 @@ body {
     display: flex;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*-------------------
+    buttons setup
+-------------------*/
 .btn {
     background-color: transparent;
     border: none;
     border-radius: 15px;
     padding: 6px;
-    cursor: pointer;
+    font-family: inherit;
 }
 
 .white-btn {
     background-color: #fff;
     color: var(--black);
     padding: 8px 15px;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .black-btn {
     background-color: var(--black);
+    color: #fff;
+    padding: 8px 15px;
+}
+
+.blue-btn {
+    background-color: var(--btn-blue);
     color: #fff;
     padding: 8px 15px;
 }
@@ -80,12 +94,11 @@ header {
 -------------------*/
 .header-box * {
     font-size: 12px;
-    color: #fff;
 }
 
 header .logo {
-    width: 125px;
-    height: 35px;
+    max-width: 124px;
+    max-height: 34px;
 }
 
 .header-nav {
@@ -127,10 +140,12 @@ header .logo {
 
 .hero-box h1 {
     margin-bottom: 20px;
+    font-size: 46px;
 }
 
 .hero-box p {
     line-height: 1.5;
+    font-size: 20px;
     padding: 15px;
     margin-bottom: 15px;
 }
@@ -139,22 +154,54 @@ header .logo {
 /* #region SECTIONS */
 section {
     background-color: #ffffff;
+    color: var(--black);
     min-height: 370px;
     padding: 20px;
     align-items: center;
 }
 
 section:nth-child(odd) {
-    background-color: #D3D3D3;
+    background-color: #F6F6F6;
 }
 
 .section-box {
-    width: 70%;
     min-height: 340px;
 }
 
+section img {
+    width: 100%;
+}
+
+.section-box .col-40,
+.section-box .col-100 {
+    line-height: 1.4;
+    padding: 50px 30px;
+}
+
+.section-box .col-40 h2,
+.section-box .col-100 h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.section-box .col-40 h2 p,
+.section-box .col-100 h2 p {
+    font-size: 20px;
+}
+
+.section-box .col-100 h3 {
+    margin: 20px 0;
+}
+
+.stars {
+    margin-bottom: -50px;
+    max-width: 400px;
+}
+
 /*-------------------
-    section columns
+    section columns setup
 -------------------*/
 .col-25 {
     width: 25%;
@@ -172,6 +219,7 @@ section:nth-child(odd) {
 
 .col-100 {
     width: 100%;
+    text-align: center;
 }
 
 .bg-blue {
