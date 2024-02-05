@@ -42,6 +42,10 @@ a {
     color: inherit;
 }
 
+li {
+    list-style: none;
+}
+
 /*-------------------
     buttons setup
 -------------------*/
@@ -106,13 +110,11 @@ header .logo {
 }
 
 .header-nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
 }
 
 .header-nav li a {
-    text-decoration: none;
     padding: 2px 16px;
 }
 
@@ -172,7 +174,8 @@ section img {
 }
 
 .section-box .col-40,
-.section-box .col-100 {
+.section-box .col-100,
+footer .section-box .col-60 {
     line-height: 1.4;
     padding: 50px 30px;
 }
@@ -199,9 +202,9 @@ section img {
     max-width: 400px;
 }
 
-/*-------------------
+/*--------------------------
     section columns setup
--------------------*/
+---------------------------*/
 .col-25 {
     width: 25%;
     border-color: #ffffff;
@@ -215,30 +218,9 @@ section img {
     width: 60%;
 }
 
-
 .col-100 {
     width: 100%;
     text-align: center;
-}
-
-.bg-blue {
-    background-color: var(--box-blue);
-}
-
-.bg-pink {
-    background-color: var(--box-pink);
-}
-
-.bg-green {
-    background-color: var(--box-green);
-}
-
-.bg-fpink {
-    background-color: var(--footer-pink);
-}
-
-.bg-fgreen {
-    background-color: var(--footer-green);
 }
 
 /* #endregion  */
@@ -248,12 +230,31 @@ footer {
     background-color: #23272A;
     min-height: 370px;
     justify-content: space-around;
+    color: #fff;
 }
 
 footer>.section-box {
-    width: 70%;
+    min-width: 600px;
     padding: 15px;
-    align-self: center;
+}
+
+footer .section-box .col-40 {
+    width: 30%;
+}
+
+footer .section-box .col-60 {
+    width: 70%;
+    gap: 34px;
+    line-height: 1.5;
+}
+
+footer .section-box .col-60 .col-25 {
+    width: calc(100% / 4);
+}
+
+footer h3,
+footer h4 {
+    color: var(--text-blue);
 }
 
 .f-border {
@@ -274,6 +275,61 @@ footer>.section-box {
     font-size: 10px;
     padding: 2px 4px;
     background-color: var(--footer-pink);
+}
+
+/*----------------------
+    language dropdown
+------------------------*/
+.flag {
+    width: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.dropbtn,
+.dropdown-content a {
+    color: #fff;
+    background-color: var(--black);
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 8px 8px;
+    font-size: 14px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--btn-blue)
+}
+
+/*----------------------
+    share section
+------------------------*/
+.share {
+    padding: 8px 0;
+}
+
+.share a {
+    padding: 5px;
+    font-size: 14px;
 }
 
 /* #endregion  */
