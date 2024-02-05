@@ -15,8 +15,7 @@
 
 /* #endregion  */
 /* #region DEBUG */
-.debug [class^="col"],
-.bottom-footer>* {
+.debug .bottom-footer>* {
     border: 1px dashed;
 }
 
